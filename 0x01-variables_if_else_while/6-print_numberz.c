@@ -1,7 +1,7 @@
 # include <stdio.h>
 /**
- * main - Print alphabet
- * Description: prints the alphabet in lowercase, followed by a new line
+ * main - Print 0-9
+ * Description: prints 0-9 only int and putchar
  * Return: Return value should be 0 indicating success
 */
 int main(void)
