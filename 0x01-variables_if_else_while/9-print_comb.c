@@ -10,12 +10,15 @@ int a;
 int b;
 a = 48;
 b = 48;
-while (a <= 57 && b <= 57)
+while (a < 57 && b <= 57)
 {
 	putchar(a);
 	putchar(',');
 	putchar(' ');
 	a++;
+	if (a == 57)
+		putchar(a);
 }
+putchar('\n');
 return (0);
 }
