@@ -14,8 +14,8 @@ while (a < 57)
 	putchar(',');
 	putchar(' ');
 	a++;
-}
-if (a == 57)
+	if (a == 57)
 	putchar(a);
+}
 return (0);
 }
