@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * main - Prints random number and assigns integer type.
- * Description: This program will assign a random number to the variable n each * time it is executed. Complete the source code in order to print whether the  * number stored in the variable n is positive or negative.
+ * Description: This program will assign a random number
  * Return: Return value should be 0 indicating success
 */
 int main(void)
