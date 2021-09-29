@@ -1,15 +1,14 @@
 # include "main.h"
 /**
 *  print_last_digit - Prints last digit of num
-* @i: Value to be taken last digit from
+* @i: Value to be taken last digit value from
 * Description: The above
-* Return: Return value should be last digit of i indicating success
+* Return: Return value should be value of last digit of i indicating success
 */
 
 int print_last_digit(int i)
 {
-	int result;
-
-	result = i % 10;
-	return (result);
+	i = i % 10;
+	putchar(i);
+	return (i);
 }
