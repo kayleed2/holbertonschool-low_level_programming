@@ -11,7 +11,7 @@ int print_last_digit(int i)
 	int r;
 
 	i = i % 10;
-	r = i(i * 1);
-	_putchar(i);
-	return (r);
+	putchar(i);
+	putchar(i);
+	return (i);
 }
