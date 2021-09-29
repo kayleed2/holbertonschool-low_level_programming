@@ -8,14 +8,13 @@ int main(void)
 {
 int a;
 a = 48;
-while (a < 57)
+while (a <= 57)
 {
 	putchar(a);
+	if (a != 57)
 	putchar(',');
 	putchar(' ');
 	a++;
-	if (a == 57)
-	putchar(a);
 }
 return (0);
 }
