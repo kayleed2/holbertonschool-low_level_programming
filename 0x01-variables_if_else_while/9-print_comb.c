@@ -11,9 +11,11 @@ a = '0';
 while (a <= '9')
 {
 	putchar(a);
-	if (a != '9')
+	if (a <= '8')
+	{
 	putchar(',');
 	putchar(' ');
+	}
 	a++;
 }
 	putchar('\n');
