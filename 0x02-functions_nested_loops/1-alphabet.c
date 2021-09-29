@@ -1,6 +1,6 @@
 # include "main.h"
 /**
-* main - Calls alphabet function written in main.h
+* print_alphabet - Calls alphabet function written in main.h
 * Description: The above
 * Return: Return value should be _putchar indicating success
 */
