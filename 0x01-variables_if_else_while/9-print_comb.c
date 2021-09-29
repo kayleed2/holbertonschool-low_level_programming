@@ -12,9 +12,12 @@ while (a <= '9')
 {
 	putchar(a);
 	if (a != '9')
-	putchar(',');
+	{
+		putchar(',');
 	putchar(' ');
 	a++;
+	}
+	putchar('\n');
 }
 return (0);
 }
