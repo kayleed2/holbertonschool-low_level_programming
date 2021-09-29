@@ -1,23 +1,23 @@
 # include "main.h"
 /**
 * _abs - Calls alphabet function written in main.h
-* @int: Value to convert into it's absolute
+* @i: Value to convert into it's absolute
 * Description: The above
 * Return: Return value should be _putchar indicating success
 */
 
-int _abs(int)
+int _abs(int i)
 {
 	int result;
 
-	if (int >= 0)
+	if (i >= 0)
 	{
-		result = int;
+		result = i;
 			}
-		else if (int < 0)
+		else if (i < 0)
 		{
-			int = int * -1;
-			result = int;
+			i = i * -1;
+			result = i;
 		}
 	return (result);
 }
