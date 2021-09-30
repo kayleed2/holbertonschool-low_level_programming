@@ -1,5 +1,5 @@
 # include "main.h"
-# include <std.io>
+# include <stdio.h>
 /**
 *  print_to_98 - Takes num and gets to 98
 * @n: Value to get to 98
