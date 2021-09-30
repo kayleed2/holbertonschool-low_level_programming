@@ -12,9 +12,15 @@ void jack_bauer(void)
 	int c;
 	int d;
 
-	for (a = '0'; a <= '2'; a++)
+for (a = '0'; a <= '2'; a++)
+{
+	for (b = '0'; b <= '9'; b++)
 	{
-		for (b = '0'; b <= '3'; b++)
+		if (a == '2' && b > '3')
+		{
+			break;
+		}
+		else
 		{
 			for (c = '0'; c <= '5'; c++)
 			{
@@ -30,4 +36,5 @@ void jack_bauer(void)
 			}
 		}
 	}
+}
 }
