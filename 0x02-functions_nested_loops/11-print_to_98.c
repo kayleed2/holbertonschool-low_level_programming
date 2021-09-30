@@ -10,15 +10,21 @@
 void print_to_98(int n)
 {
 	if (n == 98)
+	{
 	printf("%d", n);
+	}
 	else if (n > 98)
-	printf("%d", n);
-	putchar(',');
-	putchar(' ');
-	n--;
+	{
+		printf("%d", n);
+		putchar(',');
+		putchar(' ');
+		n--;
+	}
 	else
-	printf("%d", n);
-	putchar(',');
-putchar(' ');
-n++;
+	{
+		printf("%d", n);
+		putchar(',');
+		putchar(' ');
+		n++;
+	}
 }
