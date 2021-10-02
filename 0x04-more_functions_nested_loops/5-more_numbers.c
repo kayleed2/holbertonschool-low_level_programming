@@ -1,25 +1,31 @@
 # include "main.h"
 /**
-* more_numbers - Prints numbers 0 to 9, not 2/4
+*  more_numbers - Prints 0-14
 * Description: The above
-* Return: Return value should be void, with output 0-9
+* Return: Return value should be void  indicating success
 */
 
 void more_numbers(void)
 {
 	int x;
 	int y;
+	int num;
 
-	for (x = 0; x < 10; x++)
+for (y = 0; y < 10; y++)
+{
+	for (x = 0; x <= 14; x++)
 	{
-		for (y = '0'; y <= '9'; y++)
+		num = x * 1;
+		if (num <= 9)
 		{
-			_putchar(y);
-			if (y > '9')
-			{
-				_putchar('0' + y);
-			}
+			_putchar('0' + num);
 		}
-		_putchar('\n');
+		else
+		{
+			_putchar((num / 10) + '0');
+		_putchar((num % 10) + '0');
+		}
 	}
+	_putchar('\n');
+}
 }
