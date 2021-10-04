@@ -1,4 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
+/**
+ * main - Prints Fizz, Buzz, or Fizz Buzz
+ *
+ * Return: Always 0.
+ */
 
 int main(void)
 {
