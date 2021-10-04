@@ -15,21 +15,21 @@ int main(void)
 		if (x % 3 == 0 && x % 5 == 0)
 		{
 			printf("FizzBuzz");
-			putchar(' ');
 		}
 		else if (x % 3 == 0)
 		{
 			printf("Fizz");
-			putchar(' ');
 		}
 		else if (x % 5 == 0)
 		{
 			printf("Buzz");
-			putchar(' ');
 		}
-		else
+		else if (x % 3 != 0 && x % 5 != 0)
 		{
 			printf("%d", x);
+		}
+		if (x != 100)
+		{
 			putchar(' ');
 		}
 	}
