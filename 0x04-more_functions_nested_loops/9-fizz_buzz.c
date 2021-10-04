@@ -3,7 +3,7 @@
 /**
  * main - Prints Fizz, Buzz, or Fizz Buzz
  *
- * Return: Always 0.
+ * Return: void
  */
 
 int main(void)
@@ -33,4 +33,6 @@ int main(void)
 			putchar(' ');
 		}
 	}
+	printf("\n");
+	return (0);
 }
