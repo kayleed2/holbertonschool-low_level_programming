@@ -9,23 +9,25 @@ void more_numbers(void)
 {
 	int x;
 	int y;
-	int num;
+	int i;
 
-for (y = 0; y < 10; y++)
-{
-	for (x = 0; x <= 14; x++)
+	for (x = 0; x < 10; x++)
 	{
-		num = x * 1;
-		if (num <= 9)
+		for (i = 1; i <= 2; i++)
 		{
-			_putchar('0' + num);
+			for (y = '0'; y <= '9'; y++)
+			{
+				if (i == 2)
+				{
+					_putchar('1');
+				}
+				_putchar(y);
+				if (i == 2 && y > '3')
+				{
+					break;
+				}
+			}
 		}
-		else
-		{
-			_putchar((num / 10) + '0');
-		_putchar((num % 10) + '0');
-		}
+		_putchar('\n');
 	}
-	_putchar('\n');
-}
 }
