@@ -1,15 +1,18 @@
 # include "main.h"
 /**
 * print_line - Prints _ n times
-* @n: Number of times to print _
+* @n: Number of times to print
 * Description: The above
 * Return: Return value should be void  indicating success
 */
 
 void print_line(int n)
 {
-	while (n > 0 && n <= n)
+	int num;
+
+	while (n > 0 && n <= num)
 	{
+		num = n;
 		_putchar('_');
 		n++;
 		if (n < 0)
