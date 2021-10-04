@@ -1,9 +1,4 @@
 #include <stdio.h>
-/**
- * main - Prints Fizz, buzz, or fizzbuzz
- * Definition: This program prints out Fizz, buzz, or fizzbuzz
- * Return: 0
- */
 
 int main(void)
 {
