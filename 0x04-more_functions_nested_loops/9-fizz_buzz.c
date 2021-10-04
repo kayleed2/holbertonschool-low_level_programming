@@ -1,4 +1,3 @@
-# include "main.h"
 # include <stdio.h>
 /**
  * main - Prints Fizz, buzz, or fizzbuzz
