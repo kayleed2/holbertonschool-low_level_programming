@@ -1,6 +1,6 @@
 # include "main.h"
 /**
-*  print_line - Prints _ n times
+* print_line - Prints _ n times
 * @n: Number of times to print _
 * Description: The above
 * Return: Return value should be void  indicating success
