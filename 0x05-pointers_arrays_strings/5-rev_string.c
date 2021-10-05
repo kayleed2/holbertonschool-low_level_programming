@@ -21,12 +21,16 @@ void rev_string(char *s)
 	_putchar('\n');
 	i--;
 	s--;
-	while (i >= 0)
+	while (i >)
 	{
 		_putchar(*s);
 		i--;
 		s--;
+		if (i == 0)
+		{
+			_putchar(*s);
+			break;
+		}
 	}
 	_putchar('\n');
-	return;
 }
