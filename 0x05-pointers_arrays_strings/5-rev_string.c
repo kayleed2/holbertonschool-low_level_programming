@@ -26,10 +26,7 @@ void rev_string(char *s)
 		_putchar(*s);
 		i--;
 		s--;
-		if (i == 0)
-		{
-			break;
-		}
 	}
 	_putchar('\n');
+	return;
 }
