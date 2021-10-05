@@ -21,11 +21,11 @@ void rev_string(char *s)
 	_putchar('\n');
 	i--;
 	s--;
-	while (*s != '\0')
+	while (i != 0)
 	{
 		_putchar(*s);
-		--i;
-		--s;
+		i--;
+		s--;
 	}
 	_putchar('\n');
 }
