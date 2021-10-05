@@ -9,28 +9,29 @@
 void rev_string(char *s)
 {
 	int i;
+	int loop;
 
 	i = 0;
+	loop = 1;
 
-	while (*s != '\0')
+	if (loop < 2)
 	{
-		_putchar(*s);
-		i++;
-		s++;
-	}
-	_putchar('\n');
-	i--;
-	s--;
-	while (i > 0)
-	{
-		_putchar(*s);
-		i--;
-		s--;
-		if (i == 0)
+		while (*s != '\0')
 		{
 			_putchar(*s);
-			break;
+			i++;
+			s++;
 		}
-	}
+		_putchar('\n');
+		i--;
+		s--;
+		while (i > 0)
+		{
+			_putchar(*s);
+			i--;
+			s--;
+		}
 	_putchar('\n');
+	loop++;
+	}
 }
