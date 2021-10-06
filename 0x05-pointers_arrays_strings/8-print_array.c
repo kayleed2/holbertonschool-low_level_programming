@@ -18,6 +18,7 @@ void print_array(int *a, int n)
 	{
 		if (n * 1 == -n || n <= 1)
 		{
+			printf("%d\n", *a);
 			break;
 		}
 		if (i == n - 1)
