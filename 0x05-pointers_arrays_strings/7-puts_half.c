@@ -22,6 +22,7 @@ i++;
 str++;
 }
 len = i;
+n = (len - 1) / 2;
 while (*copy != '\0')
 {
 ci++;
@@ -40,4 +41,6 @@ while (ci >= n)
 _putchar(*copy);
 }
 _putchar('\n');
+}
+}
 }
