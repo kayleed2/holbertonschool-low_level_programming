@@ -14,23 +14,26 @@ void print_array(int *a, int n)
 	int i;
 
 	i = 0;
-	while (a[0] && i < n)
+	if (n <= 0)
 	{
-		if (n <= 0)
+		printf("%d\n", *a);
+		break;
+	}
+	else
+	{
+		while (a[0] && i < n)
 		{
-			printf("%d\n", *a);
-			break;
-		}
-		if (i == n - 1)
-		{
-			printf("%d\n", *a);
-			break;
-		}
-		else
-		{
-			printf("%d, ", *a);
-			a++;
-			i++;
+			if (i == n - 1)
+			{
+				printf("%d\n", *a);
+				break;
+			}
+			else
+			{
+				printf("%d, ", *a);
+				a++;
+				i++;
+			}
 		}
 	}
 }
