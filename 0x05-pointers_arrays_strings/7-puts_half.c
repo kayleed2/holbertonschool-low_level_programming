@@ -32,7 +32,7 @@ void puts_half(char *str)
 	}
 	for (ci = 0; ci <= len; ci++)
 	{
-		if (ci > n)
+		if (ci >= n)
 		{
 			_putchar(*copy);
 		}
