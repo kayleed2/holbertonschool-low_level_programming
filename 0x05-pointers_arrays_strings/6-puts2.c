@@ -16,6 +16,8 @@ void puts2(char *str)
 		{
 			str++;
 		}
+		if (str == '\0')
+			break;
 	}
 	_putchar('\n');
 }
