@@ -32,6 +32,7 @@ while (ci >= len / 2)
 {
 _putchar(*copy);
 }
+}
 else
 {
 while (ci >= n)
