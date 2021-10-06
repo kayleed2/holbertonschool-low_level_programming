@@ -27,7 +27,7 @@ while (*copy != '\0')
 {
 ci++;
 copy++;
-if (len % 2 == 0 && ci > len / 2)
+if (len % 2 == 0 && ci >= len / 2)
 {
 _putchar(*copy);
 }
