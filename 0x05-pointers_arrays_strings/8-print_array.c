@@ -18,7 +18,7 @@ void print_array(int *a, int n)
 	{
 		if (i == n - 1)
 		{
-			printf("%d", *a);
+			printf("%d\n", *a);
 			break;
 		}
 		else
@@ -28,5 +28,4 @@ void print_array(int *a, int n)
 			i++;
 		}
 	}
-	_putchar('\n');
 }
