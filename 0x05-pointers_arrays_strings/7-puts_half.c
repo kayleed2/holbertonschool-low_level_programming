@@ -6,29 +6,29 @@
 * Return: Return value should be void  indicating success
 */
 
- void puts_half(char *str)
- {
-   char *copy = str;
-   int i;
-   int len;
-   int ci;
+void puts_half(char *str)
+{
+char *copy = str;
+int i;
+int len;
+int ci;
 
-   i = 0;
-   ci = 0;
-   while (*str != '\0')
-   {
-	   i++;
-	   str++;
-   }
-   len = i;
-   while (*copy != '\0')
-   {
-	   ci++;
-	   copy++;
-	   if (ci >= len / 2)
-	   {
-		   _putchar(*copy);
-	   }
-   }
-   _putchar('\n');
- }
+i = 0;
+ci = 0;
+while (*str != '\0')
+{
+i++;
+str++;
+}
+len = i;
+while (*copy != '\0')
+{
+ci++;
+copy++;
+if (ci >= len / 2)
+{
+_putchar(*copy);
+}
+}
+_putchar('\n');
+}
