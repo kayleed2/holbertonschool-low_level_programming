@@ -12,6 +12,7 @@ char *copy = str;
 int i;
 int len;
 int ci;
+int n;
 
 i = 0;
 ci = 0;
@@ -21,11 +22,16 @@ i++;
 str++;
 }
 len = i;
+n = (len - 1) / 2;
 while (*copy != '\0')
 {
 ci++;
 copy++;
-if (ci >= len / 2)
+if (len % 2 == 0 && ci >= len / 2)
+{
+_putchar(*copy);
+}
+else if (len % 2 != 0 && ci >= n)
 {
 _putchar(*copy);
 }
