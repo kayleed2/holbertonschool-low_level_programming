@@ -20,5 +20,6 @@ void rev_string(char *s)
 	}
 	len--;
 	for (*s = s[i - 1]; len >= s[0]; i--);
+	
 	_putchar('\n');
 }
