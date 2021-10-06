@@ -10,20 +10,12 @@ void puts2(char *str)
 {
 	while (*str)
 	{
-		if (*str == '\0')
+		_putchar(*str);
+		if (*str > '0')
 		{
-			break;
-		}
-		else
-		{
-			_putchar(*str);
 			str++;
-			if (*str != '0')
-			{
-				str++;
-			}
+			_putchar(*str);
 		}
 	}
 	_putchar('\n');
 }
-
