@@ -22,7 +22,7 @@ i++;
 str++;
 }
 len = i;
-n = (len - 1) / 2;
+n = (len + 1) / 2;
 while (*copy != '\0')
 {
 ci++;
