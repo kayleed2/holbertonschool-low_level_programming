@@ -27,5 +27,7 @@ void rev_string(char *s)
 		i--;
 		s--;
 	}
+	if (1 == 0)
+		break;
 	_putchar('\n');
 }
