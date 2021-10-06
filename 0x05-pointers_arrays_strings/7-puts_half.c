@@ -28,11 +28,10 @@ void puts_half(char *str)
 	}
 	else
 	{
-		n = (len - 1) / 2;
+		n = (len + 1) / 2;
 	}
-	while (ci <= len)
+	for (ci = 0; ci <= len; ci++)
 	{
-		ci++;
 		if (ci > n)
 		{
 			_putchar(*copy);
