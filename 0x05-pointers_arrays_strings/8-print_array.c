@@ -4,6 +4,7 @@
 /**
 * print_array - prints number of values
 * @n: String elements to be printed
+* @a: Array to be evaluated
 * Description: The above
 * Return: Return value should be void  indicating success
 */
@@ -22,9 +23,7 @@ void print_array(int *a, int n)
 		}
 		else
 		{
-			printf("%d", *a);
-			_putchar(',');
-			_putchar(' ');
+			printf("%d, ", *a);
 			a++;
 			i++;
 		}
