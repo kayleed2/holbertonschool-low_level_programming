@@ -26,8 +26,8 @@ void rev_string(char *s)
 		_putchar(*s);
 		i--;
 		s--;
-	}
-	if (1 == 0)
+	if (i == 0)
 		break;
+	}
 	_putchar('\n');
 }
