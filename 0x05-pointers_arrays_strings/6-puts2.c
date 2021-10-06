@@ -15,7 +15,6 @@ void puts2(char *str)
 		if (*str != '0')
 		{
 			str++;
-			_putchar(*str);
 		}
 		if (*str == '\\' || *str == '\0')
 			break;
