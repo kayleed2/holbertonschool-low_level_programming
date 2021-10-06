@@ -33,11 +33,11 @@ void puts_half(char *str)
 	while (ci <= len)
 	{
 		ci++;
-		copy++;
-		if (ci >= n)
+		if (ci > n)
 		{
 			_putchar(*copy);
 		}
+		copy++;
 	}
 	_putchar('\n');
 }
