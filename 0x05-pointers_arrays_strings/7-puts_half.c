@@ -36,5 +36,4 @@ else if (len % 2 != 0 && ci > n)
 _putchar(*copy);
 }
 }
-_putchar('\n');
 }
