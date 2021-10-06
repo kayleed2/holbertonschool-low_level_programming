@@ -27,11 +27,11 @@ while (*copy != '\0')
 {
 ci++;
 copy++;
-if (len % 2 == 0 && ci >= len / 2)
+if (len % 2 == 0 && ci > len / 2)
 {
 _putchar(*copy);
 }
-else if (len % 2 != 0 && ci >= n)
+else if (len % 2 != 0 && ci > n)
 {
 _putchar(*copy);
 }
