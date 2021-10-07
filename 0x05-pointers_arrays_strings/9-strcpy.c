@@ -26,9 +26,9 @@ char *_strcpy(char *dest, char *src)
 	for (i = 0; dest[i] <= len; i++)
 	{
 		if (dest[i] == '\0')
-			{
-				break;
-			}
+		{
+			break;
+		}
 		dest++;
 	}
 	return (dest);
