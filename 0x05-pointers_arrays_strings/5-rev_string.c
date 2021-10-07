@@ -21,8 +21,9 @@ void rev_string(char *s)
 		s[len - i - 1] = rev;
 	}
 }
-/** _strlen - Prints restates var value
- */
+
+int _strlen(char *s);
+
 int _strlen(char *s)
 {
 	int i;
