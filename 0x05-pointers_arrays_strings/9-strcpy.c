@@ -30,7 +30,6 @@ char *_strcpy(char *dest, char *src)
 				break;
 			}
 		dest++;
-			
 	}
 	return (dest);
 }
