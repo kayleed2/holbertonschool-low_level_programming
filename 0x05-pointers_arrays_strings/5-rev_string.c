@@ -21,9 +21,12 @@ void rev_string(char *s)
 		s[len - i - 1] = rev;
 	}
 }
-
-int _strlen(char *s);
-
+/**
+* _strlen - Prints restates var value
+* @s: String to determine length
+* Description: The above
+* Return: Return value should be void  indicating success
+*/
 int _strlen(char *s)
 {
 	int i;
