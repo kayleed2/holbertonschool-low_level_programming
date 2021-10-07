@@ -16,7 +16,7 @@ char *_strcpy(char *dest, char *src)
 
 	for (i = 0; src[0] <= '\0'; i++)
 	{
-		if (src == ('\0')
+		if (src[i] == '\0')
 			{
 			break;
 			}
@@ -25,12 +25,12 @@ char *_strcpy(char *dest, char *src)
 	len = i;
 	for (i = 0; dest[i] <= len; i++)
 	{
-		if (dest == ('\0')
+		if (dest[i] == '\0')
 			{
 				break;
 			}
 		dest++;
-			}
+			
 	}
 	return (dest);
 }
