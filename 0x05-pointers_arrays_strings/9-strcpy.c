@@ -16,12 +16,21 @@ char *_strcpy(char *dest, char *src)
 
 	for (i = 0; src[0] <= '\0'; i++)
 	{
-		src++;
+		if (src == ('\0')
+			{
+			break;
+			}
+			src++;
 	}
 	len = i;
 	for (i = 0; dest[i] <= len; i++)
 	{
+		if (dest == ('\0')
+			{
+				break;
+			}
 		dest++;
+			}
 	}
-	return(dest);
+	return (dest);
 }
