@@ -20,3 +20,15 @@ void rev_string(char *s)
 		s[len - i - 1] = rev;
 	}
 }
+int _strlen(char *s)
+{
+	int i;
+
+	i = 0;
+	while (*s != '\0')
+	{
+		i++;
+		s++;
+	}
+	return (i);
+}
