@@ -12,10 +12,15 @@ char *_strncat(char *dest, char *src, int n)
 {
 	char *con;
 	int dlen;
+	int slen;
 	int i;
 	int byte;
 
 	con = dest;
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		slen = i;
+	}
 	for (i = 0; dest[i] != '\0'; i++)
 	{
 		dlen = i;
@@ -27,6 +32,10 @@ char *_strncat(char *dest, char *src, int n)
 	byte = dlen + n;
 	while (i >= dlen && i <= byte)
 	{
+		if (n >= slen + byte)
+		{
+			break;
+		}
 		*dest = *src;
 		dest++;
 		src++;
