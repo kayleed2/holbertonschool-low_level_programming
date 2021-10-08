@@ -14,14 +14,10 @@ int _strcmp(char *s1, char *s2)
 	int str2v;
 	int result;
 
-	for (i = 0; s1[i] != '\0'; i++)
-	{
-		i = str1v;
-	}
-	for (i = 0; s2[i] != '\0'; i++)
-	{
-		i = str2v;
-	}
+	for (i = 0; s1[i] != '\0'; i++);
+	str1v = i;
+	for (i = 0; s2[i] != '\0'; i++);
+	str2v = i;
 if (str1v == str2v)
 {
 	result = 0;
