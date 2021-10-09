@@ -35,6 +35,10 @@ char *_strcat(char *dest, char *src)
 		dest++;
 		src++;
 		i++;
+		if (i > n + 1)
+		{
+			dest[i] = '\0';
+		}
 	}
 	return (con);
 }
