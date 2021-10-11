@@ -12,6 +12,15 @@ char *cap_string(char *a)
 
 	for (i = 0; a[i] != '\0'; i++)
 	{
+		if (a[i] == '\t')
+		{
+			a[i] = 32;
+		}
+		if (a[i] == 45)
+		{
+			i++;
+			a[i] = a[i];
+		}
 		if (a[i] < 65 || a[i] == 92)
 		{
 			i++;
