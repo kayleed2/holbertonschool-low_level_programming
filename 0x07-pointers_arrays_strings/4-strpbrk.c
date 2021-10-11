@@ -10,6 +10,7 @@
 char *_strpbrk(char *s, char *accept)
 {
 	unsigned int x;
+
 	while (*s != '\0')
 	{
 		for (x = 0; accept[x] != '\0'; x++)
