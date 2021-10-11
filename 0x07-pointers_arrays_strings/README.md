@@ -1,0 +1,1 @@
+This directory contains the necessary files to complete project 0x05 Pinters, Arrays, and Strings
