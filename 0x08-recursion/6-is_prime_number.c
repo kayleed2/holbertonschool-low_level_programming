@@ -1,8 +1,8 @@
 # include "main.h"
 /**
-* _sqrt_recursion - Returns square root
-* @n: Value to find square root
-* Description: Value of square root through recursion
+* is_prime_number - Returns 0 or 1 depending on prime
+* @n: Value to see if prime
+* Description: Prime or not
 * Return: Return value is 0 or 1
 */
 
