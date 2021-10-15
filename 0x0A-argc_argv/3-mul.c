@@ -20,7 +20,7 @@ int main (int argc, char *argv[])
 			printf("Error\n");
 			return (1);
 		}
-		num = strtol(argv[count], NULL, 10);
+		num = atoi(argv[count]);
 		result = result * num;
 	}
 		printf("%d\n", result);
