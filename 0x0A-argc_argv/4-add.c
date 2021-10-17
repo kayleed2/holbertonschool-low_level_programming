@@ -23,8 +23,17 @@ int main(int argc, char *argv[])
 		num = atoi(argv[count]);
 		if (num == '\0')
 		{
+			if (num != 0)
+			{
 			printf("Error\n");
 			return (1);
+			}
+			else
+			{
+				result = result + num;
+				printf("%d\n", result);
+				return (0);
+			}
 		}
 		result = result + num;
 	}
