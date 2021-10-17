@@ -3,6 +3,8 @@
 # include "main.h"
 /**
  * main - This program prints it's name
+ * @argc: Number of args
+ * @argv: The arguments passed
  * Return - 0 for success
  */
 
