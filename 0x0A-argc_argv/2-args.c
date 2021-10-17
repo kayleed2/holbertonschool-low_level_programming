@@ -1,12 +1,13 @@
 # include <stdlib.h>
 # include <stdio.h>
-# include "main.h"
 /**
  * main - This program prints every argument
- * Return - 0 for success
+ * @argc: number of arguments
+ * @argv: arguments passed
+ * Return: 0 for success
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int count;
 
@@ -15,5 +16,5 @@ int main (int argc, char *argv[])
 	printf("%s", argv[count]);
 	printf("\n");
 	}
-	return 0;
+	return (0);
 }
