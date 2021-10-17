@@ -1,12 +1,13 @@
 # include <stdlib.h>
 # include <stdio.h>
-# include "main.h"
 /**
  * main - This program multiplies arguments
- * Return - 0 for success, Error for more than 2 args
+ * @argc: number of arguments
+ * @argv: arguments passed
+ * Return: 0 for success, Error for more than 2 args
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int count;
 	int num;
