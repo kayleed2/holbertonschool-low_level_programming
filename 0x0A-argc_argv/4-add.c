@@ -13,6 +13,8 @@ int main(int argc, char *argv[])
 	int num;
 	int result;
 
+	result = 0;
+
 	if (argc == 1)
 	{
 		printf("0\n");
@@ -20,21 +22,17 @@ int main(int argc, char *argv[])
 	}
 	for (count = 1; count < argc; count++)
 	{
-		num = atoi(argv[count]);
-		if (num == '\0')
+		if (*argv[count] < '0' || *argv[count] > '9')
 		{
-			if (num != 0)
-			{
 			printf("Error\n");
 			return (1);
-			}
-			else
-			{
-				continue;
-			}
+		}
+		else
+		{
+			num = atoi(argv[count]);
 		}
 		result = result + num;
 	}
-		printf("%d\n", result);
-		return (0);
+	printf("%d\n", result);
+	return (0);
 }
