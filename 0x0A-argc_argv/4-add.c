@@ -30,9 +30,7 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
-				result = result + num;
-				printf("%d\n", result);
-				return (0);
+				continue;
 			}
 		}
 		result = result + num;
