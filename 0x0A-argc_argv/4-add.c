@@ -34,5 +34,5 @@ int main(int argc, char *argv[])
 		result = result + num;
 	}
 	printf("%d\n", result);
-	return (0);
+	return (result);
 }
