@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 	int count;
 	int num;
 	int result;
+	int x;
 
 	result = 0;
 
@@ -22,7 +23,8 @@ int main(int argc, char *argv[])
 	}
 	for (count = 1; count < argc; count++)
 	{
-		if (*argv[count] < '0' || *argv[count] > '9')
+		for (x = 0; argv[count][x]; x++)
+		if (argv[count][x] < '0' || argv[count][x] > '9')
 		{
 			printf("Error\n");
 			return (1);
