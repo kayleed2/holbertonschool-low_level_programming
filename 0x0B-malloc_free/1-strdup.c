@@ -10,8 +10,8 @@
 char *_strdup(char *str)
 {
 	char *p;
-	unsigned int i;
-	unsigned int size;
+	int i;
+	int size;
 
 	if (!str)
 	{
@@ -21,7 +21,7 @@ char *_strdup(char *str)
 	{
 		size = i + 1;
 	}
-	p = malloc(size * sizeof(str));
+	p = malloc(size * sizeof(str[i]));
 	if (!p)
 	{
 		return ('\0');
