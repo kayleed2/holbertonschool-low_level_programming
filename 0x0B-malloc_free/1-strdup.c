@@ -1,6 +1,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include "main.h"
+# include <string.h>
 /**
  * _strdup - This function creates an array
  * @str: string to be copied
@@ -17,10 +18,7 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		size = i + 1;
-	}
+	size = strlen(str);
 	p = malloc((size + 1) * sizeof(char));
 	if (p == NULL)
 	{
