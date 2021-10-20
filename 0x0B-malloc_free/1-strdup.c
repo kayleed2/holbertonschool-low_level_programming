@@ -19,7 +19,7 @@ char *_strdup(char *str)
 	}
 	if (str == NULL || str[0] == '\0')
 	{
-		return ('\0');
+		return (NULL);
 	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
