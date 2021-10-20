@@ -13,7 +13,7 @@ char *_strdup(char *str)
 	unsigned int i;
 	unsigned int size;
 
-	if (!str)
+	if (*str == '\0')
 	{
 		return ('\0');
 	}
@@ -21,7 +21,7 @@ char *_strdup(char *str)
 	{
 		size = i + 1;
 	}
-	p = malloc(size * sizeof(str[i]));
+	p = malloc(size * sizeof(str));
 	if (!p)
 	{
 		return ('\0');
