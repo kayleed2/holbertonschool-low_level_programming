@@ -17,6 +17,10 @@ char *_strdup(char *str)
 	{
 		return ('\0');
 	}
+	if (str[0] == '\0')
+	{
+		str = "";
+	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		size = i + 2;
