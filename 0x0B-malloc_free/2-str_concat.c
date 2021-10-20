@@ -33,10 +33,18 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; i < size1; i++)
 	{
 		p[i] = s1[i];
+		if (s1[0] == '\0')
+		{
+			p = s2;
+		}
 	}
 	for (i = 0; i <= size2; i++)
 	{
 		p[i + size1] = s2[i];
+		if (s2[0] == '\0')
+		{
+			p = s1;
+		}
 	}
 	return (p);
 }
