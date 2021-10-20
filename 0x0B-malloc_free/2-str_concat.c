@@ -16,11 +16,11 @@ char *str_concat(char *s1, char *s2)
 	int size2;
 	int totalsize;
 
-	if (s1[0] == '\0')
+	if (s1 == NULL)
 	{
 		s1 = "";
 	}
-	if (s2[0] == '\0')
+	if (s2 == NULL)
 	{
 		s2 = "";
 	}
@@ -42,7 +42,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		p[i] = s1[i];
 	}
-	for (i = 0; i < size2; i++)
+	for (i = 0; i <= size2; i++)
 	{
 		p[i + size1] = s2[i];
 	}
