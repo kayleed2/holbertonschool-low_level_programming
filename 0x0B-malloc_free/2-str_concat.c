@@ -1,6 +1,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include "main.h"
+# include <string.h>
 /**
  * str_concat - Concatenates 2 strings
  * @s1: string 1
@@ -25,16 +26,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	for (i = 0; s1[i] != '\0'; i++)
-	{
-		size1 = i + 1;
-	}
-	for (i = 0; s2[i] != '\0'; i++)
-	{
-		size2 = i + 1;
-	}
-	totalsize = (size1 + size2) + 1;
-	p = malloc(totalsize * sizeof(s1[i]));
+	size1 = strlen(s1);
+	size2 = strlen(s2);
+	totalsize = size1 + size2;
+	p = malloc((totalsize + 1) * sizeof(s1[i]));
 	if (p == NULL)
 	{
 		return (NULL);
