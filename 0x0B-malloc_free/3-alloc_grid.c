@@ -19,7 +19,7 @@ int **alloc_grid(int width, int height)
 
 	if (ptp == NULL)
 	{
-		return (NULL);
+		free(ptp);
 	}
 	if (width <= 0)
 	{
@@ -41,7 +41,6 @@ int **alloc_grid(int width, int height)
 			ptp[i][x] = element;
 		}
 	}
-	free(ptp);
 	return (ptp);
 
 }
