@@ -19,14 +19,10 @@ int **alloc_grid(int width, int height)
 
 	if (ptp == NULL)
 	{
-		free (ptp);
+		free(ptp);
 		return (NULL);
 	}
-	if (width <= 0)
-	{
-		return (NULL);
-	}
-	if (height <= 0)
+	if (height <= 0 || width <= 0)
 	{
 		return (NULL);
 	}
