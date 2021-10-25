@@ -12,21 +12,21 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
+	char *p;
 	unsigned int total = nmemb * size;
-
-	unsigned int *p = malloc(total);
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
+	p = malloc(total);
 	if (!p)
 	{
 		return (NULL);
 	}
 	for (i = 0; i < total; i++)
 	{
-		*p = 0;
+		p[i] = 0;
 	}
 	return (p);
 }
