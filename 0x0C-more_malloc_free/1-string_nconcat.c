@@ -6,17 +6,16 @@
  * string_nconcat - Aloocates memory
  * @s1: String 1
  * @s2: String 2
+ * @n: Bytes of s2
  * Return: Char array
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *new;
-	unsigned int total;
+	unsigned int x, y, total;
 	unsigned int size1 = strlen(s1);
 	unsigned int size2 = strlen(s2);
-	unsigned int x;
-	unsigned int y;
 
 	total = size1 + size2;
 	if (s1 == NULL)
@@ -40,17 +39,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		if (n >= size2)
 		{
-			while (y <= size2)
-			{
-			new[x] = s2[y];
-			x++;
-			}
+			n = size2;
+		}
+		if (y == n)
+		{
+			new[x] = '\0';
 		}
 		else
 		{
-		new[x] = s2[y];
-		x++;
+			new[x] = s2[y];
+			x++;
 		}
 	}
-	return (new);
+return (new);
 }
