@@ -11,26 +11,25 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int i, nb;
-	unsigned int *p, *q;
+	unsigned int i;
+	unsigned int total = nmemb * size;
 
-	nb = nmemb * size;
-	q = malloc(nb);
-	p = q;
+	unsigned int *p = malloc(total);
+
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
-	if ((malloc(nb)) != NULL)
+	if (p)
 	{
-		for (i = 0; i < nb; i++)
+		for (i = 0; i < total; i++)
 		{
-			*p++ = 0;
+			*p = 0;
 		}
 	}
 	else
 	{
 		return (NULL);
 	}
-	return (q);
+	return (p);
 }
