@@ -20,16 +20,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	if (p)
-	{
-		for (i = 0; i < total; i++)
-		{
-			*p = 0;
-		}
-	}
-	else
+	if (!p)
 	{
 		return (NULL);
+	}
+	for (i = 0; i < total; i++)
+	{
+		*p = 0;
 	}
 	return (p);
 }
