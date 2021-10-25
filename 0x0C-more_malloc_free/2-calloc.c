@@ -16,13 +16,21 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	nb = nmemb * size;
 	q = malloc(nb);
-p = q;
-if ((malloc(nb)) != NULL)
-{
-	for (i = 0; i < nb; i++)
+	p = q;
+	if (nmemb == 0 || size == 0)
 	{
-		*p++ = 0;
+		return (NULL);
 	}
-}
-return (q);
+	if ((malloc(nb)) != NULL)
+	{
+		for (i = 0; i < nb; i++)
+		{
+			*p++ = 0;
+		}
+	}
+	else
+	{
+		return (NULL);
+	}
+	return (q);
 }
