@@ -17,12 +17,12 @@ int *array_range(int min, int max)
 
 	if (min > max)
 	{
-		return (NULL);
+		return ('\0');
 	}
 	p = malloc(total * sizeof(int));
 	if (!p)
 	{
-		return (NULL);
+		return ('\0');
 	}
 	for (i = 0; i <= max; i++)
 	{
