@@ -20,9 +20,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	printf("%d\n", get_op_func(*argv)(a, b));
+	printf("%d\n", get_op_func(argv[2])(a, b));
 	return (0);
 }
