@@ -4,7 +4,7 @@
 
 /**
  * main - Takes cli args and performs op
- * @arc: Number of args passed
+ * @argc: Number of args passed
  * @argv: Arguments passed
  * Return: Result of performed op
  */
