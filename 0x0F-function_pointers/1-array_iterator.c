@@ -3,7 +3,7 @@
 # include <string.h>
 # include "function_pointers.h"
 /**
- * function_iterator - Iterates func on array
+ * array_iterator - Iterates func on array
  * @array: Array to execute on
  * @size: Size of array
  * @action: Func to call
