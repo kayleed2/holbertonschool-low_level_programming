@@ -18,20 +18,11 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit (98);
-	}
-	if (!get_op_func(argv))
-	{
-		printf("Error\n");
-		exit (99);
-	}
-	if ((argv[2] == 47 || argv[2] == 37) && (argv[3] == 48))
-	{
-		printf("Error\n");
-		exit (100);
+		exit(98);
 	}
 
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	return (get_op_func(argv)(a , b));
+	printf("%d\n", get_op_func(*argv)(a, b));
+	return (0);
 }
