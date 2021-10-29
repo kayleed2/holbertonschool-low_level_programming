@@ -3,6 +3,7 @@
 # include <string.h>
 # include "variadic_functions.h"
 # include <stdarg.h>
+
 /**
  * pr_char - Prints char
  * @a: Char to print
@@ -46,6 +47,7 @@ void pr_str(va_list a)
 		arr = "(nil)";
 	printf("%s", arr);
 }
+
 /**
  * print_all - Prints all
  * @format: List of types of args
@@ -67,14 +69,18 @@ void print_all(const char * const format, ...)
 	while (format && format[x])
 	{
 		i = 0;
-		while (i < 4 && format[x] != *(pr[i].ar))
+		while (pr[i].ar != NULL && *(pr[i].ar) != format[x])
 		{
 			i++;
 		}
-			if (i < 4)
+			if (i < 3)
 			{
 			pr[i].f(args);
 			printf(", ");
+			}
+			else if (i == 3)
+			{
+				pr[i].f(args);
 			}
 			x++;
 	}
