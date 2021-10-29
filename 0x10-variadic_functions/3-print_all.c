@@ -4,6 +4,49 @@
 # include "variadic_functions.h"
 # include <stdarg.h>
 /**
+ * pr_char - Prints char
+ * @a: Char to print
+ * Return: void
+ */
+void pr_char(va_list a)
+{
+	printf("%c", va_arg(a, int));
+}
+
+/**
+ * pr_int - Prints int
+ * @a: Int to print
+ * Return: void
+ */
+void pr_int(va_list a)
+{
+	printf("%d", va_arg(a, int));
+}
+
+/**
+ * pr_float - Multiplies two ints
+ * @a: Float to print
+ * Return: Void
+ */
+void pr_float(va_list a)
+{
+	printf("%f", va_arg(a, double));
+}
+
+/**
+ * pr_str - Divides two ints
+ * @a: String to print
+ * Return: Result
+ */
+void pr_str(va_list a)
+{
+	char *arr = va_arg(a, char *);
+
+	if (arr == NULL)
+		arr = "(nil)";
+	printf("%s", arr);
+}
+/**
  * print_all - Prints all
  * @format: List of types of args
  * Return: Print strings
@@ -12,38 +55,29 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	unsigned int i = 0;
-	unsigned int len = strlen(format);
-
+	unsigned int x = 0;
+	pr_t pr[] = {
+		{"c", pr_char},
+		{"i", pr_int},
+		{"f", pr_float},
+		{"s", pr_str},
+		{NULL, NULL}
+	};
 	va_start(args, format);
 
-	while (i < len)
+	while (format && format[i])
 	{
-		if (format[i] == 'i')
+		while (pr[i].ar != NULL)
 		{
-			int n = va_arg(args, int);
-
-			printf("%d", n);
+			if (*(pr[i].ar) == format[x])
+			{
+			pr[i].f(args);
+			printf(", ");
+			}
+			i++;
 		}
-		else if (format[i] == 'c')
-		{
-			int n = va_arg(args, int);
-
-			printf("%c", n);
-		}
-		if (format[i] == 'f')
-		{
-			double n = va_arg(args, double);
-
-			printf("%f", n);
-		}
-		else if (format[i] == 's')
-		{
-			char *n = va_arg(args, char *);
-
-			printf("%s", n);
-		}
-		i++;
+		x++;
 	}
-	printf("\n");
 	va_end(args);
+	printf("\n");
 }
