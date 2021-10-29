@@ -54,8 +54,7 @@ void pr_str(va_list a)
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	unsigned int i = 0;
-	unsigned int x = 0;
+	int i, x;
 	pr_t pr[] = {
 		{"c", pr_char},
 		{"i", pr_int},
@@ -65,18 +64,19 @@ void print_all(const char * const format, ...)
 	};
 	va_start(args, format);
 
-	while (format && format[i])
+	while (format && format[x])
 	{
-		while (pr[i].ar != NULL)
+		i = 0;
+		while (i < 4 && format[x] != *(pr[i].ar))
 		{
-			if (*(pr[i].ar) == format[x])
+			i++;
+		}
+			if (i < 4)
 			{
 			pr[i].f(args);
 			printf(", ");
 			}
-			i++;
-		}
-		x++;
+			x++;
 	}
 	va_end(args);
 	printf("\n");
