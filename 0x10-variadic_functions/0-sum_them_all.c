@@ -1,28 +1,28 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
-# include "function_pointers.h"
+# include "variadic_functions.h"
+# include <stdarg.h>
 /**
- * int_index - Searches for int
- * @array: Array to search
- * @size: Num elements in array
- * @cmp: Function pointer to compare
- * Return: Index of nonzero
+ * sum_them_all - Adds all ints
+ * @n: Number of args
+ * Return: Sum of parameters
 */
-int int_index(int *array, int size, int (*cmp)(int))
+int sum_them_all(const unsigned int n, ...)
 {
-	int i;
+	va_list args;
+	unsigned int i;
+	unsigned int num = 0;
 
-	if (size <= 0 || (!array) || (!cmp))
+	if (n == 0)
+		return (0);
+
+	va_start(args, n);
+
+	for (i = 0; i < n; i++)
 	{
-		return (-1);
+		num = va_arg(args, int) + num;
 	}
-	for (i = 0; i <= size; i++)
-	{
-		if (cmp(array[i]) != 0)
-		{
-			return (i);
-		}
-	}
-	return (-1);
+	va_end(args);
+	return (num);
 }
