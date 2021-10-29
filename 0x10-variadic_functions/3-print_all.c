@@ -78,10 +78,6 @@ void print_all(const char * const format, ...)
 			pr[i].f(args);
 			printf(", ");
 			}
-			else if (i == 3)
-			{
-				pr[i].f(args);
-			}
 			x++;
 	}
 	va_end(args);
