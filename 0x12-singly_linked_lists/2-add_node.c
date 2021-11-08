@@ -12,7 +12,7 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
-	unsigned int n = strlen(dup);
+	unsigned int n = strlen(str);
 
 	if (!head || !str)
 		return (NULL);
