@@ -17,6 +17,8 @@ list_t *add_node_end(list_t **head, const char *str)
 	char *dup = strdup(str);
 	unsigned int n = strlen(dup);
 
+	if (!head || !str)
+		return (NULL);
 	new = (list_t *) malloc(sizeof(list_t));
 	if (!new)
 	{
