@@ -13,7 +13,7 @@ list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
 	char *dup = strdup(str);
-	unsigned int n = _strlen(dup);
+	unsigned int n = strlen(dup);
 
 	if (!head || !str)
 		return (NULL);
@@ -30,26 +30,4 @@ list_t *add_node(list_t **head, const char *str)
 	new->next = *head;
 	*head = new;
 	return (new);
-}
-
-/**
-* _strlen - Prints restates var value
-* @s: String to determine length
-* Description: The above
-* Return: Return value should be void  indicating success
-*/
-
-int _strlen(char *s)
-{
-	int i;
-
-	i = 0;
-	while (*s != '\0')
-	{
-		i++;
-		s++;
-	}
-
-
-	return (i);
 }
