@@ -15,14 +15,17 @@ unsigned int binary_to_uint(const char *b)
 	int i;
 	unsigned int len = strlen(b);
 
-	if (b == NULL || *b == NULL)
+	if (!b)
 		return (0);
 	for (i = len - 1; i >= 0; i--)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (b[i] == '0' || b[i] == '1')
+		{
+			num = num + (b[i] - '0') * x;
+			x = x * 2;
+		}
+		else
 			return (0);
-		num = num + (b[i] - '0') * x;
-		x = x * 2;
 	}
 	return (num);
 }
