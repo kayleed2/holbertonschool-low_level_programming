@@ -16,9 +16,7 @@
 
 int main(int argc, char *argv[])
 {
-	int fdfile1;
-	int fdfile2;
-	int r, w;
+	int fdfile1, fdfile2, r, w, cl;
 	char *buffer[1024];
 
 	if (argc != 3)
@@ -33,14 +31,24 @@ int main(int argc, char *argv[])
 		dprintf(STDOUT_FILENO, "Error: Can't read from file NAME_OF_THE_FILE\n");
 		exit(98);
 	}
-	close(fdfile1);
-	fdfile2 = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 00600);
+	cl = close(fdfile1);
+	if (cl == -1)
+	{
+		dprintf(STDOUT_FILENO, "Error: Can't close fd FD_VALUE\n");
+		exit(100);
+	}
+	fdfile2 = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 00664);
 	w = write(fdfile2, buffer, 1024);
 	if (fdfile2 == -1 || w == -1)
 	{
 		dprintf(STDOUT_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
 		exit(99);
 	}
-	close(fdfile2);
+	cl = close(fdfile2);
+	if (cl == -1)
+	{
+		dprintf(STDOUT_FILENO, "Error: Can't close fd FD_VALUE\n");
+		exit(100);
+	}
 	return (1);
 }
