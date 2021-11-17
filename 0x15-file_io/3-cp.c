@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	if (fdfile2 == -1 || w == -1)
 	{
 		dprintf(STDOUT_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
-		exit (99);
+		exit(99);
 	}
 	close(fdfile2);
 	return (1);
