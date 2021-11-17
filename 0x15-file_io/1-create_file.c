@@ -22,13 +22,13 @@ int create_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 
+	if (text_content == NULL)
+		text_content = "";
+
 	fdopen = open(filename, O_RDWR | O_CREAT | O_TRUNC, 00600);
 
 	if (fdopen == -1)
 		return (-1);
-
-	if (text_content == NULL)
-		return (1);
 
 	w = write(fdopen, text_content, len);
 	if (w == -1)
