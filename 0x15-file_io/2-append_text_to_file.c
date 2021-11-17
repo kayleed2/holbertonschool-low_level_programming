@@ -23,14 +23,11 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	fdopen = open(filename, O_RDWR | O_APPEND);
 
-	if (text_content == NULL && fdopen == -1)
-		return (-1);
-
-	if (text_content == NULL && fdopen == 1)
-		return (1);
-
 	if (fdopen == -1)
 		return (-1);
+
+	if (text_content == NULL)
+		return (1);
 
 	w = write(fdopen, text_content, strlen(text_content));
 	if (w == -1)
