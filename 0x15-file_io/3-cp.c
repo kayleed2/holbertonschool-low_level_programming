@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	}
 	fdfile1 = open(argv[1], O_RDONLY);
 	r = read(fdfile1, buffer, 1024);
-	if (fdfile1 == -1 || r == -1)
+	if (fdfile1 == -1 || r == -1 || !argv[1])
 	{
 		dprintf(STDOUT_FILENO, "Error: Can't read from file NAME_OF_THE_FILE\n");
 		exit(98);
