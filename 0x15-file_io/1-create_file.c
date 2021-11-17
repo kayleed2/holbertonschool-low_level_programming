@@ -26,10 +26,11 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content == NULL)
 	{
-		close(fdopen);
-		return (1);
+		text_content = "";
+		len = 1;
+		write(fdopen, text_content, len);
 	}
 	else
-	write(fdopen, text_content, len);
+		write(fdopen, text_content, len);
 	return (1);
 }
