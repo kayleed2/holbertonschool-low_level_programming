@@ -28,26 +28,26 @@ int main(int argc, char *argv[])
 	r = read(fdfile1, buffer, 1024);
 	if (fdfile1 == -1 || r == -1 || !argv[1])
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't read from file NAME_OF_THE_FILE\n");
+		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	cl = close(fdfile1);
 	if (cl == -1)
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't close fd FD_VALUE\n");
+		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", fdfile1);
 		exit(100);
 	}
 	fdfile2 = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 00664);
 	w = write(fdfile2, buffer, 1024);
 	if (fdfile2 == -1 || w == -1)
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
+		dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	cl = close(fdfile2);
 	if (cl == -1)
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't close fd FD_VALUE\n");
+		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", fdfile2);
 		exit(100);
 	}
 	return (1);
