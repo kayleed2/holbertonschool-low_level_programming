@@ -29,7 +29,6 @@ int create_file(const char *filename, char *text_content)
 
 	if (fdopen == -1)
 		return (-1);
-
 	w = write(fdopen, text_content, len);
 	if (w == -1)
 		return (-1);
