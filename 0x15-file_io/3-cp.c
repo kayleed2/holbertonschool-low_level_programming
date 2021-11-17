@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 	w = write(fdfile2, buffer, 1024);
 	if (fdfile2 == -1 || w == -1)
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	cl = close(fdfile2);
