@@ -25,11 +25,7 @@ int create_file(const char *filename, char *text_content)
 	fdopen = open(filename, O_RDWR | O_CREAT | O_TRUNC, 00600);
 
 	if (text_content == NULL)
-	{
-		text_content = "";
-		len = 1;
-		write(fdopen, text_content, len);
-	}
+		return (1);
 	else
 		write(fdopen, text_content, len);
 	return (1);
