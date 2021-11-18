@@ -22,23 +22,21 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	fdfile1 = open(argv[1], O_RDONLY);
-	if (fdfile1 == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
-			exit(98);
 	fdfile2 = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
-	if (fdfile2 == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]),
-			exit(98);
 	while (nchars == 1024)
 	{
 		nchars = read(fdfile1, buffer, 1024);
-		if (nchars == -1)
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
-				exit(98);
+		if (nchars == -1 || fdfile1 == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
 		w = write(fdfile2, buffer, nchars);
-		if (w == -1)
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
-				exit(99);
+		if (fdfile2 == -1 || w == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
 	}
 	cl = close(fdfile1);
 	if (cl == -1)
