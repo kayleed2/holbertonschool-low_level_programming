@@ -16,7 +16,7 @@
 
 int main(int argc, char *argv[])
 {
-	int fdfile1, fdfile2, nchars = 1024;
+	int fdfile1, fdfile2, w, nchars = 1024;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -29,12 +29,14 @@ int main(int argc, char *argv[])
 	if (fdfile2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
 			exit(98);
-	while ((nchars = read(fdfile1, buffer, 1024)) != 0)
+	while (nchars == 1024)
 	{
+		nchars = read(fdfile1, buffer, 1024);
 		if (nchars == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
 				exit(98);
-		if (write(fdfile2, buffer, nchars) != nchars)
+		w = write(fdfile2, buffer, nchars);
+		if (w == -1)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
 				exit(99);
 	}
