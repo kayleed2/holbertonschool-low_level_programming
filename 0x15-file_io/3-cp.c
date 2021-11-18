@@ -16,7 +16,7 @@
 
 int main(int argc, char *argv[])
 {
-	int fdfile1, fdfile2, w, nchars = 1024;
+	int fdfile1, fdfile2, cl, w, nchars = 1024;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -40,11 +40,17 @@ int main(int argc, char *argv[])
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
 				exit(99);
 	}
-	if (close(fdfile1) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdfile1),
-			exit(100);
-	if (close(fdfile2) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdfile2),
-			exit(100);
+	cl = close(fdfile1);
+	if (cl == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdfile1);
+		exit(100);
+	}
+	cl = close(fdfile2);
+	if (cl == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdfile2);
+		exit(100);
+	}
 	return (0);
 }
