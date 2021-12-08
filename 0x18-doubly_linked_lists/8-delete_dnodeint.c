@@ -8,7 +8,7 @@
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *node = malloc(sizeof(dlistint_t)), *temp = *head;
+	dlistint_t *node, *temp = *head;
 	unsigned int i = 0;
 
 	if (head == NULL || !temp)
