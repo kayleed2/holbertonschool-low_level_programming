@@ -12,7 +12,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	if (!newnode)
 	{
-		free(newnode)
+		free(newnode);
 		return (NULL);
 	}
 
