@@ -20,7 +20,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_element = malloc(sizeof(hash_node_t) * 1);
 
 	if (!new_element)
-		return (0);
+		return (NULL);
 	new_element->key = strdup(key);
 	new_element->value = strdup(value);
 	new_element->next = NULL;
