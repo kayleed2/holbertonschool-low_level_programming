@@ -9,17 +9,17 @@
  */
 void print_array(const int *array, size_t size)
 {
-    size_t i;
+size_t i;
 
-    i = 0;
-    while (array && i < size)
-    {
-        if (i > 0)
-            printf(", ");
-        printf("%d", array[i]);
-        ++i;
-    }
-    printf("\n");
+i = 0;
+while (array && i < size)
+{
+if (i > 0)
+printf(", ");
+printf("%d", array[i]);
+++i;
+}
+printf("\n");
 }
 
 /**
@@ -32,24 +32,24 @@ void print_array(const int *array, size_t size)
 
 int advanced_binary(int *array, size_t size, int value)
 {   
-    int key = size / 2;
-    
-    if (array == NULL)
-        return (-1);
+int key = size / 2;
 
-    printf("Searching in array: ");
-    print_array(array, size);
+if (array == NULL)
+return (-1);
 
-    if (array[key] == value)
-        return (key);
+printf("Searching in array: ");
+print_array(array, size);
 
-    if (array[key] > value) 
-    {
-        return (advanced_binary(array, key - 1, value));
-    }
-    else 
-    {
-        return (advanced_binary(array + key, key, value));
-    }
-    return (-1);
+if (array[key] == value)
+return (key);
+
+if (array[key] > value) 
+{
+return (advanced_binary(array, key - 1, value));
+}
+else 
+{
+return (advanced_binary(array + key, key, value));
+}
+return (-1);
 }
