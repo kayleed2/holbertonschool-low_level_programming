@@ -35,25 +35,21 @@ int advanced_binary(int *array, size_t size, int value)
     if (array == NULL)
         return (-1);
 
-    while (size >= 1) 
+    int key = size / 2;
+
+    printf("Searching in array: ");
+    print_array(array, size);
+
+    if (array[key] == value)
+        return (key);
+
+    if (array[key] > value) 
     {
-        int key = size / 2;
-
-        printf("Searching in array: ");
-        print_array(array, size);
-
-        if (array[key] == value)
-            return (key);
-
-        if (array[key] > value) 
-        {
-            return (advanced_binary(array, key - 1, value));
-        }
-        else 
-        {
-            return (advanced_binary(array + key, key, value));
-        }
+        return (advanced_binary(array, key - 1, value));
     }
-
+    else 
+    {
+        return (advanced_binary(array + key, key, value));
+    }
     return (-1);
 }
