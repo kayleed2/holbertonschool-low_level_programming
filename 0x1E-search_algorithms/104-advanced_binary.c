@@ -23,14 +23,14 @@ void print_array(const int *array, size_t size)
 }
 
 /**
-* binary_search - Searches for value in sorted array
+* advanced_binary - Searches for value in sorted array
 * @array: Pointer to 1st element
 * @size: Number of elements
 * @value: Value to search for
 * Return: Index of value or -1 if NULL
 **/
 
-int binary_search(int *array, size_t size, int value)
+int advanced_binary(int *array, size_t size, int value)
 {   
     if (array == NULL)
         return (-1);
@@ -47,11 +47,11 @@ int binary_search(int *array, size_t size, int value)
 
         if (array[key] > value) 
         {
-            return (binary_search(array, key - 1, value));
+            return (advanced_binary(array, key - 1, value));
         }
         else 
         {
-            return (binary_search(array + key, key, value));
+            return (advanced_binary(array + key, key, value));
         }
     }
 
