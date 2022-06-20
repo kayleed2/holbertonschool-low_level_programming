@@ -40,10 +40,10 @@ return (-1);
 printf("Searching in array: ");
 print_array(array, size);
 
-if (array[key] == value)
+if (array[key] == value && array)
 return (key);
 
-if (array[key] > value)
+if (array[key] > value && array)
 {
 return (advanced_binary(array, key - 1, value));
 }
