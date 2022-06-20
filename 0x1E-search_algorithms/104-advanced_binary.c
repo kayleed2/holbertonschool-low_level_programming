@@ -31,7 +31,7 @@ printf("\n");
 **/
 
 int advanced_binary(int *array, size_t size, int value)
-{   
+{
 int key = size / 2;
 
 if (array == NULL)
@@ -43,11 +43,11 @@ print_array(array, size);
 if (array[key] == value)
 return (key);
 
-if (array[key] > value) 
+if (array[key] > value)
 {
 return (advanced_binary(array, key - 1, value));
 }
-else 
+else
 {
 return (advanced_binary(array + key, key, value));
 }
