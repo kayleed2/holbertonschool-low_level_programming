@@ -32,10 +32,10 @@ void print_array(const int *array, size_t size)
 
 int advanced_binary(int *array, size_t size, int value)
 {   
+    int key = size / 2;
+    
     if (array == NULL)
         return (-1);
-
-    int key = size / 2;
 
     printf("Searching in array: ");
     print_array(array, size);
