@@ -23,8 +23,7 @@ printf("\n");
 
 /**
 * linear_skip - Searches for value in sorted array
-* @array: Pointer to 1st element
-* @size: Number of elements
+* @list: Pointer to 1st element of list
 * @value: Value to search for
 * Return: Index of value or -1 if NULL
 **/
