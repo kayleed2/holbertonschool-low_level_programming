@@ -31,9 +31,6 @@ printf("\n");
 
 skiplist_t *linear_skip(skiplist_t *list, int value)
 {
-    if (!list)
-       printf("%s", "nil"); 
-
     value = 20;
     return(list);
 }
