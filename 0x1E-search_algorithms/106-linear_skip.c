@@ -30,9 +30,9 @@ printf("\n");
 
 skiplist_t *linear_skip(skiplist_t *list, int value)
 {
-    if (!value || !list)
-        return (NULL);
-    
-    printf("Value checked at index [%d] = [%d]\n", value, value);
-    return (list);
+if (!value || !list)
+return (NULL);
+
+printf("Value checked at index [%d] = [%d]\n", value, value);
+return (list);
 }
