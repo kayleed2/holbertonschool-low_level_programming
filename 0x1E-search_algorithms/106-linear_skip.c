@@ -30,6 +30,8 @@ printf("\n");
 
 skiplist_t *linear_skip(skiplist_t *list, int value)
 {
-    value = 20;
-    return(list);
+    if (!value || !list)
+        return (NULL);
+    
+    return (list);
 }
